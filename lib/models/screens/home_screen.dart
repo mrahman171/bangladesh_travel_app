@@ -5,6 +5,9 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:bangladesh_travel_app/models/Popular/home_screen1.dart';
 import 'package:bangladesh_travel_app/models/New_tourist/home_screen2.dart';
+import 'package:bangladesh_travel_app/models/Beach/home_screen3.dart';
+import 'package:bangladesh_travel_app/models/mountain/home_screen4.dart';
+import 'package:bangladesh_travel_app/models/lake/home_screen4.dart';
 
 class Homescreen extends StatefulWidget {
   const Homescreen({Key? key}) : super(key: key);
@@ -23,7 +26,7 @@ class _HomescreenState extends State<Homescreen> {
         child: Container(
           decoration: const BoxDecoration(
             image: DecorationImage(
-                image: AssetImage("assets/15.jpg"), fit: BoxFit.cover),
+                image: AssetImage("assets/1.jpg"), fit: BoxFit.cover),
           ),
           child: ListView(
             physics: BouncingScrollPhysics(),
@@ -210,18 +213,45 @@ class _HomescreenState extends State<Homescreen> {
                           color: Colors.redAccent),
                       tabs: [
                         Tab(
-                          child: Container(
-                            child: Text('Beach'),
+                          child: GestureDetector(
+                            onTap: () {
+                              Navigator.of(context).push(
+                                MaterialPageRoute(
+                                  builder: (context) => Homescreen_3(),
+                                ),
+                              );
+                            },
+                            child: Container(
+                              child: Text('Beach'),
+                            ),
                           ),
                         ),
                         Tab(
-                          child: Container(
-                            child: Text('Mountain'),
+                          child: GestureDetector(
+                            onTap: () {
+                              Navigator.of(context).push(
+                                MaterialPageRoute(
+                                  builder: (context) => Homescreen_4(),
+                                ),
+                              );
+                            },
+                            child: Container(
+                              child: Text('Mountain'),
+                            ),
                           ),
                         ),
                         Tab(
-                          child: Container(
-                            child: Text('Lake'),
+                          child: GestureDetector(
+                            onTap: () {
+                              Navigator.of(context).push(
+                                MaterialPageRoute(
+                                  builder: (context) => Homescreen_5(),
+                                ),
+                              );
+                            },
+                            child: Container(
+                              child: Text('Lake'),
+                            ),
                           ),
                         ),
                       ],
