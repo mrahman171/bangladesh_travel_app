@@ -1,4 +1,5 @@
 import '/models/Popular/DestinationScreen.dart';
+import '/models/screens/home_screen.dart';
 import '/models/Popular/Destination.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -28,7 +29,7 @@ class _Homescreen_1State extends State<Homescreen_1> {
             physics: BouncingScrollPhysics(),
             children: [
               Padding(
-                padding: EdgeInsets.only(top: 20),
+                padding: EdgeInsets.only(top: 30),
                 child: Center(
                   child: DefaultTextStyle(
                     style: GoogleFonts.playfairDisplay(
@@ -124,7 +125,7 @@ class _Homescreen_1State extends State<Homescreen_1> {
                   height: 30,
                   margin: EdgeInsets.only(top: 10.8, left: 14.4, bottom: 15.9),
                   child: DefaultTabController(
-                    length: 3,
+                    length: 4,
                     child: TabBar(
                       labelPadding: EdgeInsets.only(
                         left: 14.4,
@@ -141,6 +142,20 @@ class _Homescreen_1State extends State<Homescreen_1> {
                           borderRadius: BorderRadius.circular(90),
                           color: Colors.redAccent),
                       tabs: [
+                        Tab(
+                          child: GestureDetector(
+                            onTap: () {
+                              Navigator.of(context).push(
+                                MaterialPageRoute(
+                                  builder: (context) => Homescreen(),
+                                ),
+                              );
+                            },
+                            child: Container(
+                              child: Text('HOME'),
+                            ),
+                          ),
+                        ),
                         Tab(
                           child: Container(
                             child: Text('Beach'),
