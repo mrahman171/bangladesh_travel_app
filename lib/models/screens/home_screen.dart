@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:bangladesh_travel_app/models/Popular/home_screen1.dart';
+import 'package:bangladesh_travel_app/models/New_tourist/home_screen2.dart';
 
 class Homescreen extends StatefulWidget {
   const Homescreen({Key? key}) : super(key: key);
@@ -97,8 +98,17 @@ class _HomescreenState extends State<Homescreen> {
                         ),
                       ),
                       Tab(
-                        child: Container(
-                          child: Text('New Tourist Places '),
+                        child: GestureDetector(
+                          onTap: () {
+                            Navigator.of(context).push(
+                              MaterialPageRoute(
+                                builder: (context) => Homescreen_2(),
+                              ),
+                            );
+                          },
+                          child: Container(
+                            child: Text('New Tourist Spot'),
+                          ),
                         ),
                       ),
                     ],
