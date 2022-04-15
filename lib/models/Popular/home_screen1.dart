@@ -1,18 +1,18 @@
-import '/models/screens/DestinationScreen.dart';
-import '/models/Destination.dart';
+import '/models/Popular/DestinationScreen.dart';
+import '/models/Popular/Destination.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:bangladesh_travel_app/models/Popular/home_screen1.dart';
 
-class Homescreen extends StatefulWidget {
-  const Homescreen({Key? key}) : super(key: key);
+class Homescreen_1 extends StatefulWidget {
+  const Homescreen_1({Key? key}) : super(key: key);
 
   @override
-  State<Homescreen> createState() => _HomescreenState();
+  State<Homescreen_1> createState() => _Homescreen_1State();
 }
 
-class _HomescreenState extends State<Homescreen> {
+class _Homescreen_1State extends State<Homescreen_1> {
   final _pageController = PageController(viewportFraction: 0.877);
   int _index = 0;
   @override
@@ -44,64 +44,6 @@ class _HomescreenState extends State<Homescreen> {
                         print("Tap Event");
                       },
                     ),
-                  ),
-                ),
-              ),
-              Container(
-                height: 30,
-                margin: EdgeInsets.only(top: 28.8, left: 14.4),
-                child: DefaultTabController(
-                  length: 3,
-                  child: TabBar(
-                    labelPadding: EdgeInsets.only(
-                      left: 14.4,
-                      right: 14.4,
-                    ),
-                    isScrollable: true,
-                    labelColor: Color.fromARGB(255, 246, 246, 246),
-                    unselectedLabelColor: Color.fromRGBO(50, 128, 113, 1),
-                    labelStyle: GoogleFonts.lato(
-                        fontSize: 14, fontWeight: FontWeight.w700),
-                    indicator: BoxDecoration(
-                        gradient: const LinearGradient(
-                            colors: [Colors.redAccent, Colors.orangeAccent]),
-                        borderRadius: BorderRadius.circular(50),
-                        color: Colors.redAccent),
-                    tabs: [
-                      Tab(
-                        child: GestureDetector(
-                          onTap: () {
-                            Navigator.of(context).push(
-                              MaterialPageRoute(
-                                builder: (context) => Homescreen(),
-                              ),
-                            );
-                          },
-                          child: Container(
-                            child: Text('Recommended'),
-                          ),
-                        ),
-                      ),
-                      Tab(
-                        child: GestureDetector(
-                          onTap: () {
-                            Navigator.of(context).push(
-                              MaterialPageRoute(
-                                builder: (context) => Homescreen_1(),
-                              ),
-                            );
-                          },
-                          child: Container(
-                            child: Text('Popular'),
-                          ),
-                        ),
-                      ),
-                      Tab(
-                        child: Container(
-                          child: Text('New Tourist Places '),
-                        ),
-                      ),
-                    ],
                   ),
                 ),
               ),
