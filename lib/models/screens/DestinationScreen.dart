@@ -1,5 +1,6 @@
 import '/models/Destination.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class DestinationScreen extends StatefulWidget {
   final Destination destination;
@@ -100,8 +101,10 @@ class _DestinationScreenState extends State<DestinationScreen> {
                   ),
                   Text(
                     widget.destination.description,
-                    style: const TextStyle(
-                      fontSize: 20,
+                    style: GoogleFonts.playfairDisplay(
+                      fontSize: 16,
+                      fontWeight: FontWeight.w100,
+                      color: Color(0XFF000000),
                     ),
                   ),
                 ],
