@@ -71,4 +71,9 @@ final List<Destination> destinations = [
       name: 'Patenga Sea Beach',
       description:
           'If you want to get away from busy city life then you can visit Patenga Sea Beach to enjoy the Bay of Bengal and the charming sunset. You can enjoy a water drive or boat trip here. There are also other entertainment facilities like a bike ride, horse ride, kites, etc. But the beach is narrow so it is better not to swim here.'),
+  Destination(
+      image: 'assets/14.jpg',
+      name: 'Kuakata Sea Beach',
+      description:
+          'Kuakata Sea Beach is a panoramic sea beach with 30 kilometers of picturesque landscape located at Lotachapli, Kolapara, Patuakhali. It’s a unique beach where you can be witnessed of both sunrise & sunset, not only that you can enjoy the beauty of Jhauban which is covered by coconut trees.'),
 ];
