@@ -173,7 +173,7 @@ class _HomescreenState extends State<Homescreen> {
                 ),
               ),
               Padding(
-                padding: EdgeInsets.only(top: 8.8, bottom: 10),
+                padding: EdgeInsets.only(bottom: 10),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   crossAxisAlignment: CrossAxisAlignment.center,
@@ -193,7 +193,7 @@ class _HomescreenState extends State<Homescreen> {
               Center(
                 child: Container(
                   height: 30,
-                  margin: EdgeInsets.only(top: 10.8, left: 14.4, bottom: 15.9),
+                  margin: EdgeInsets.only(left: 14.4, bottom: 15.9),
                   child: DefaultTabController(
                     length: 3,
                     child: TabBar(
@@ -262,6 +262,22 @@ class _HomescreenState extends State<Homescreen> {
             ],
           ),
         ),
+      ),
+      bottomNavigationBar: BottomNavigationBar(
+        items: const <BottomNavigationBarItem>[
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home),
+            label: 'Home',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.camera),
+            label: 'Camera',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.chat),
+            label: 'Chats',
+          ),
+        ],
       ),
     );
   }
